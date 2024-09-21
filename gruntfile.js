@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             build: {
-                src: 'src/scripts/main.js',
+                src: 'src/scripts/*.js',
                 dest: 'dist/scripts/main.min.js'
             }
         },

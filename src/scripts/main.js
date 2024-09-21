@@ -33,3 +33,12 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+//--------------------------------------------------------------//
+
+//PopUp Quote
+document.getElementById('showPopup').addEventListener('click', function() {
+    const popup = document.getElementById('popup');
+    popup.classList.toggle('active');
+    popup.classList.toggle('hidden');
+});
