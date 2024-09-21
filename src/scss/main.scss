@@ -1,7 +1,6 @@
 @import 'reset';
 @import 'var';
 @import 'header';
-@import 'media';
 @import 'modal';
 @import 'quotes';
 @import 'dropdown';
@@ -209,4 +208,107 @@ body.lightTheme {
         opacity: 50%;
     }
         
+}
+
+/* Styles for mobile phones (portrait mode) */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .container {
+        max-width: 480px;
+    }
+
+    .modal__content {
+        max-width: 414px;
+    }
+
+    .dropdown_content > ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Styles for mobile phones (landscape mode) */
+@media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .header {
+        max-width: 767px;
+    }
+
+    .container {
+        max-width: 767px;
+    }
+
+    .dropdown_content > ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Styles for tablets (portrait mode) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .header {
+        max-width: 768px;
+    }
+
+    .container {
+        max-width: 768px;
+    }
+
+    .dropdown_content > ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Styles for larger tablets (portrain mode) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        max-width: 1024px;
+    }
+
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* Styles for tablets (landscape mode) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .header {
+        max-width: 1024px;
+    }
+
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* Styles for laptops and small desktops */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .header {
+        max-width: 1200px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Styles for larger desktop screens */
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+    .header {
+        max-width: 1440px;
+    }
+
+    .container {
+        max-width: 1440px;
+    }
+}
+
+/* Styles for ultra-wide or 4K displays */
+@media only screen and (min-width: 1441px) and (max-width: 2560px) {
+    .header {
+        max-width: 2560px;
+    }
+
+    .container {
+        max-width: 2560px;
+    }
 }

@@ -24,41 +24,68 @@ let isPopupActive = false;
 aboutLink.onclick = function() {
     if (!isPopupActive) {
         modal.style.display = "block";
+        isPopupActive = true; // Set popup as active
     }
-}
+};
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
-}
+    isPopupActive = false; // Reset popup state
+};
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        isPopupActive = false; // Reset popup state
     }
-}
+};
 
 //--------------------------------------------------------------//
 
+// Array with and 10 quotes
+const quotes = [
+    // Quotes
+    "“Success is not final, failure is not fatal: It is the courage to continue that counts.” – Winston Churchill",
+    "“Don’t watch the clock; do what it does. Keep going.” – Sam Levenson",
+    "“Opportunities don't happen. You create them.” – Chris Grosser",
+    "“The only limit to our realization of tomorrow is our doubts of today.” – Franklin D. Roosevelt",
+    "“The way to get started is to quit talking and begin doing.” – Walt Disney",
+    "“Don’t be pushed around by the fears in your mind. Be led by the dreams in your heart.” – Roy T. Bennett",
+    "“Success usually comes to those who are too busy to be looking for it.” – Henry David Thoreau",
+    "“If you really look closely, most overnight successes took a long time.” – Steve Jobs",
+    "“Hardships often prepare ordinary people for an extraordinary destiny.” – C.S. Lewis",
+    "“It’s not whether you get knocked down, it’s whether you get up.” – Vince Lombardi"
+];
+
+// Function to generate a random idea or quote
+function generateQuote() {
+    // Get a random index from the array
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    // Get the idea or quote at that index
+    const randomMessage = quotes[randomIndex];
+    // Display the message in the "message" div
+    document.getElementById("message").textContent = randomMessage;
+}
+
 // PopUp Quote
 document.getElementById('showPopup').addEventListener('click', function() {
+    generateQuote(); // Generate quote
     const popup = document.getElementById('popup');
     isPopupActive = !isPopupActive; // Toggle popup state
     popup.classList.toggle('active');
     popup.classList.toggle('hidden');
 });
 
-//--------------------------------------------------------------//
 
+//--------------------------------------------------------------//
 
 //Dropdown Apps
 document.addEventListener('DOMContentLoaded', function() {
     const dropbtn = document.querySelector('.toggle_apps_btn');
     
-    dropbtn.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default button behavior
-        const dropdownContent = document.getElementsByClassName(".dropdown_content"); // Get the dropdown content
+    dropbtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default button behavior
+        const dropdownContent = document.getElementsByClassName("dropdown_content")[0]; // Access the first dropdown content
 
         // Toggle visibility
         if (dropdownContent.classList.contains('show')) {
@@ -69,9 +96,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close the dropdown if the user clicks outside of it
-    window.onclick = function(e) {
-        if (!e.target.matches('.toggle_apps_btn')) {
-            const dropdowns = document.getElementsByClassName(".dropdown_content");
+    window.onclick = function(event) {
+        if (!event.target.matches('.toggle_apps_btn')) {
+            const dropdowns = document.getElementsByClassName("dropdown_content");
             for (let i = 0; i < dropdowns.length; i++) {
                 const openDropdown = dropdowns[i];
                 if (openDropdown.classList.contains('show')) {
@@ -81,3 +108,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 });
+

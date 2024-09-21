@@ -6,30 +6,29 @@
     z-index: 1;
     background-color: $footerColor;
     border-radius: 16px;
-    padding: 8px;
+    padding: 16px;
     margin-top: 8px;
     opacity: 0; /* Start invisible */
-    left: 85%;
-    transform: translate(-15%);
+    transition: visibility 0s, opacity .3s ease-in-out;
+    visibility: hidden;
+}
+
+/* Ensure vertical alignment in center for dropdown items */
+.dropdown_content > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    flex-wrap: wrap;
+
+    li > a {
+            font-size: 14px;
+        }
 }
 
 .show {
     display: block; /* Make it block to show */
     opacity: 1; /* Make visible */
-    transform: translateX(0);
-}
-
-/* Ensure vertical alignment in center for dropdown items */
-.dropdown_content ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-
-    li {
-        a {
-            font-size: 12px;
-        }
-    }
+    visibility: visible;
 }
