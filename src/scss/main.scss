@@ -4,6 +4,7 @@
 @import 'media';
 @import 'modal';
 @import 'quotes';
+@import 'dropdown';
 
 body {
     height: 100vh;
@@ -28,9 +29,33 @@ body {
 
 body.lightTheme {
 
-    background: linear-gradient(45deg, white, #b3cde0); /* white to light purple-blue */
+    background: linear-gradient(45deg, white, #b3cde0);
     color: $bgColor;
 
+    .header {
+        &__list {
+            &__item {
+                a {
+                    color: $bgColor;
+                }
+                .bi {
+                    color: $bgColor;
+                    
+                }
+            }
+        }
+    }
+
+    .dropdown_content {
+        background-color: $footerColorLightTheme;
+    
+        ul {
+            li > a {
+                color: $bgColor;
+            }
+        }
+    }
+    
     .main {
         &__title {
             color: $titleColorLightTheme;
@@ -56,6 +81,12 @@ body.lightTheme {
                     background-color: $footerColorLightTheme;
                 }
             }
+        }
+
+        .modal__content {
+            background-color: rgba(191, 191, 191, 0.95);
+            color: $bgColor;
+            border: 1px solid $bgColor;
         }
 
         .popup {

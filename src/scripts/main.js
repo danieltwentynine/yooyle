@@ -48,3 +48,36 @@ document.getElementById('showPopup').addEventListener('click', function() {
     popup.classList.toggle('active');
     popup.classList.toggle('hidden');
 });
+
+//--------------------------------------------------------------//
+
+
+//Dropdown Apps
+document.addEventListener('DOMContentLoaded', function() {
+    const dropbtn = document.querySelector('.toggle_apps_btn');
+    
+    dropbtn.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default button behavior
+        const dropdownContent = document.getElementsByClassName(".dropdown_content"); // Get the dropdown content
+
+        // Toggle visibility
+        if (dropdownContent.classList.contains('show')) {
+            dropdownContent.classList.remove('show');
+        } else {
+            dropdownContent.classList.add('show');
+        }
+    });
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+        if (!e.target.matches('.toggle_apps_btn')) {
+            const dropdowns = document.getElementsByClassName(".dropdown_content");
+            for (let i = 0; i < dropdowns.length; i++) {
+                const openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    };
+});

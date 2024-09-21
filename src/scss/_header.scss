@@ -1,23 +1,5 @@
 @import 'var';
 
-body.lightTheme {
-
-    .header {
-        &__list {
-            &__item {
-                a {
-                    color: $bgColor;
-                }
-                .bi {
-                    color: $bgColor;
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-
-}
-
 .header {
     max-width: 480px;
     width: 100%;

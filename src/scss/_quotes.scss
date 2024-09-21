@@ -7,7 +7,7 @@
     color: $fontColor;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: all .5s ease;
+    transition: all .5s ease-in-out;
     z-index: 1000;
 
     &.hidden {
@@ -30,7 +30,7 @@
         top: -10px;
         left: 50%;
         transform: translateX(-50%);
-        animation: arrow-bounce .5s ease;
+        animation: arrow-bounce .5s infinite;
     }
 }
 
