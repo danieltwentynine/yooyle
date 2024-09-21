@@ -31,6 +31,17 @@
     }
 }
 
+/* Styles for larger tablets (portrain mode) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        max-width: 1024px;
+    }
+
+    .container {
+        max-width: 1024px;
+    }
+}
+
 /* Styles for tablets (landscape mode) */
 @media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
     .header {
