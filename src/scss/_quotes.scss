@@ -10,7 +10,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.3s ease;
+    transition: all .5s ease-in-out;
 }
 
 .popup.hidden {
@@ -33,7 +33,7 @@
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
-    animation: arrow-bounce 0.3s ease;
+    animation: arrow-bounce .5s ease-in-out;
 }
 
 @keyframes arrow-bounce {
