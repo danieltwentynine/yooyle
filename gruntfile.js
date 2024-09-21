@@ -1,3 +1,5 @@
+const { registerTask } = require('grunt');
+
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -26,14 +28,29 @@ module.exports = function(grunt) {
                     livereload: true
                 }
             }
-        }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'prebuild/index.html': 'src/index.html'
+                }
+            }
+        },
+        clean: ['prebuild']
     });
 
     // Load the plugins
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
     // Default task(s)
-    grunt.registerTask('default', ['uglify', 'sass', 'watch']);
+    grunt.registerTask('default', ['sass', 'watch']);
+    grunt,registerTask('build', ['uglify', 'sass'])
 };
