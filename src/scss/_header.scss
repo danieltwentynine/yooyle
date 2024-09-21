@@ -1,0 +1,67 @@
+@import 'var';
+
+body.lightTheme {
+
+    .header {
+        &__list {
+            &__item {
+                a {
+                    color: $bgColor;
+                }
+                .bi {
+                    color: $bgColor;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+.header {
+    max-width: 480px;
+    width: 100%;
+    padding: 10px;
+
+    &__list {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 30px;
+
+        &__item {
+            cursor: pointer;
+            a {
+                color: $fontColor;
+                font-size: 12px;
+            
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .toggle_apps_btn {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                .bi {
+                    color: $fontColor;
+                    font-size: 20px;
+                }
+            }
+
+            .toggle_profile_menu_btn {
+                border: none;
+                border-radius: 50%;
+                background-color: transparent;
+                cursor: pointer;
+
+                img {
+                    height: 32px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
