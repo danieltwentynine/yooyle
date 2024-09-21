@@ -17,9 +17,14 @@ const aboutLink = document.getElementById("about");
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("modal__content_close")[0];
 
-// When the user clicks the button, open the modal
+// Variable to track if popup is active
+let isPopupActive = false;
+
+// When the user clicks the button, open the modal only if popup is not active
 aboutLink.onclick = function() {
-    modal.style.display = "block";
+    if (!isPopupActive) {
+        modal.style.display = "block";
+    }
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -36,9 +41,10 @@ window.onclick = function(event) {
 
 //--------------------------------------------------------------//
 
-//PopUp Quote
+// PopUp Quote
 document.getElementById('showPopup').addEventListener('click', function() {
     const popup = document.getElementById('popup');
+    isPopupActive = !isPopupActive; // Toggle popup state
     popup.classList.toggle('active');
     popup.classList.toggle('hidden');
 });
