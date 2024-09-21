@@ -1,0 +1,52 @@
+@import 'var';
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Full width */
+
+      /* Modal Content */
+    &__content {
+        background-color: rgba(22, 22, 22, 0.95);
+        color: $fontColor;
+        margin: 0 auto; /* Center the modal */
+        padding: 20px;
+        border: 1px solid #eee;
+        width: 100%; /* Could be more or less, depending on screen size */
+        height: 50vh;
+        max-width: 500px; /* Max width to limit size on larger screens */
+        border-radius: 8px;
+
+        p {
+            font-size: 12px;
+
+                a {
+                    color: $fontColor;
+                }
+        }
+
+        #giphy {
+            height:150px;
+            margin: 24px auto 24px;
+        }
+
+          /* The Close Button */
+        &_close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover, :focus {
+                color: $fontColor;
+                text-decoration: none;
+            }
+        }
+    }
+}
