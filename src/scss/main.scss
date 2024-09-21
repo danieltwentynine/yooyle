@@ -57,6 +57,11 @@ body.lightTheme {
                 }
             }
         }
+
+        .popup {
+            background-color: $footerColorLightTheme;
+            color: $bgColor;
+        }
     }
 
     .footer {

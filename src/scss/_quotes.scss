@@ -6,34 +6,33 @@
     background-color: $bgColor;
     color: $fontColor;
     border-radius: 8px;
-    border: 1px dotted $fontColor;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(20px);
-    transition: all .5s ease-in-out;
-}
+    transition: all .5s ease;
 
-.popup.hidden {
-    display: none;
-}
+    &.hidden {
+        display: none;
+    }
 
-.popup.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
+    &.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(10px);
+    }
 
-.arrow {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #333;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: arrow-bounce .5s ease-in-out;
+    .arrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #333;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: arrow-bounce .5s ease;
+    }
 }
 
 @keyframes arrow-bounce {
