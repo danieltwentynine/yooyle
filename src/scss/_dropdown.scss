@@ -22,15 +22,11 @@
 /* Ensure vertical alignment in center for dropdown items */
 .dropdown_content ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
 
     li {
-        margin-top: 8px;
-    }
-
-    &:last-child {
-        margin-bottom: 8px;
+        gap: 10px;
     }
 }
