@@ -9,24 +9,29 @@
     padding: 8px;
     margin-top: 8px;
     opacity: 0; /* Start invisible */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth animation */
-    transform: translateY(-20px); /* Start higher up for the drop effect */
+    left: 85%;
+    transform: translate(-15%);
 }
 
 .show {
     display: block; /* Make it block to show */
     opacity: 1; /* Make visible */
-    transform: translateY(0); /* Drop down to original position */
+    transform: translateX(0);
 }
 
 /* Ensure vertical alignment in center for dropdown items */
 .dropdown_content ul {
     display: flex;
     flex-direction: row;
+    gap: 10px;
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
 
     li {
-        gap: 10px;
+        
+
+        a {
+            font-size: 12px;
+        }
     }
 }
