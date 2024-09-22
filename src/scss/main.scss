@@ -10,19 +10,19 @@ body {
     overflow: hidden;
     color: $fontColor;
 
-    /* Adding a grainy effect */
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background-image: url('https://www.transparenttextures.com/patterns/grain.png'); /* Example texture */
-        opacity: 0.15; /* Adjust opacity for subtle grain effect */
-        z-index: 1;
-    }
+    // /* Adding a grainy effect */
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     pointer-events: none;
+    //     background-image: url('https://www.transparenttextures.com/patterns/grain.png'); /* Example texture */
+    //     opacity: 0.15; /* Adjust opacity for subtle grain effect */
+    //     z-index: 1;
+    // }
 }
 
 body.lightTheme {
