@@ -3,7 +3,7 @@
 .header {
     max-width: 480px;
     width: 100%;
-    padding: 10px;
+    padding: 16px;
 
     &__list {
         display: flex;
@@ -13,37 +13,20 @@
 
         &__item {
             cursor: pointer;
-            a {
-                color: $fontColor;
-                font-size: 12px;
-            
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
+            font-size: 20px;
 
             .toggle_apps_btn {
                 border: none;
                 background-color: transparent;
                 cursor: pointer;
+                color: $fontColor;
+                font-size: 24px;
 
-                .bi {
-                    color: $fontColor;
-                    font-size: 20px;
+                &:hover {
+                    transform: rotate(180deg);
+                    transition: all .5s ease-in-out;
                 }
             }
-
-            // .toggle_profile_menu_btn {
-            //     border: none;
-            //     border-radius: 50%;
-            //     background-color: transparent;
-            //     cursor: pointer;
-
-            //     img {
-            //         height: 32px;
-            //         border-radius: 50%;
-            //     }
-            // }
         }
     }
 }

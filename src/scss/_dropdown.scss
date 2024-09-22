@@ -8,8 +8,9 @@
     background-color: $footerColor;
     box-shadow: 4px 4px 16px rgba(0,0,0,0.5);
     border-radius: 16px;
-    padding: 16px;
+    padding: 24px;
     margin-top: 8px;
+    margin-left: -200px;
     opacity: 0; /* Start invisible */
     transition: visibility 0s, opacity .3s ease-in-out;
     visibility: hidden;
@@ -24,9 +25,19 @@
     align-items: center; /* Center horizontally */
     flex-wrap: wrap;
 
-    li > a {
-            font-size: 14px;
+    li {
+        a {
+            font-size: 24px;
+            color: $fontColor;
         }
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all .3s ease-in-out;
+        }
+    }
+    
+    
 }
 
 .show {
