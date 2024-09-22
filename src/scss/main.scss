@@ -71,9 +71,9 @@ body.lightTheme {
     
         &__list {
             &__item {
-                &__link {
-                    color: $bgColor;
-                }
+                // &__link {
+                //     color: $bgColor;
+                // }
     
                 &__btn {
                     color: $bgColor;
@@ -170,11 +170,11 @@ body.lightTheme {
             display: flex;
             align-items: center;
 
-            &__link {
-                color: $fontColor;
-                text-decoration: underline;
-                font-size: 12px;
-            }
+            // &__link {
+            //     color: $fontColor;
+            //     text-decoration: underline;
+            //     font-size: 12px;
+            // }
 
             &__btn {
                 cursor: pointer;
