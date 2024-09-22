@@ -3,6 +3,7 @@
 .dropdown_content {
     display: none; /* Hide dropdown content by default */
     position: absolute; /* Position it below the button */
+    right: auto;
     z-index: 1;
     background-color: $footerColor;
     box-shadow: 4px 4px 16px rgba(0,0,0,0.5);

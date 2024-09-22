@@ -1,7 +1,7 @@
 @import 'reset';
 @import 'var';
 @import 'header';
-@import 'quotes';
+// @import 'quotes';
 @import 'dropdown';
 
 body {
@@ -68,29 +68,23 @@ body.lightTheme {
             }
         }
     
-        &__list {
-            &__item {
-                // &__link {
-                //     color: $bgColor;
-                // }
+        // &__list {
+        //     &__item {
+        //         // &__link {
+        //         //     color: $bgColor;
+        //         // }
     
-                &__btn {
-                    color: $bgColor;
-                    background-color: $footerColorLightTheme;
-                }
-            }
-        }
+        //         &__btn {
+        //             color: $bgColor;
+        //             background-color: $footerColorLightTheme;
+        //         }
+        //     }
+        // }
 
-        .modal__content {
-            background-color: rgba(191, 191, 191, 0.95);
-            color: $bgColor;
-            border: 1px solid $bgColor;
-        }
-
-        .popup {
-            background-color: $footerColorLightTheme;
-            color: $bgColor;
-        }
+        // .popup {
+        //     background-color: $footerColorLightTheme;
+        //     color: $bgColor;
+        // }
     }
 
     .footer {
@@ -160,36 +154,36 @@ body.lightTheme {
         
     // }
 
-    &__list {
-        display: flex;
-        gap: 24px;
-        margin-top: 40px;
+    // &__list {
+    //     display: flex;
+    //     gap: 24px;
+    //     margin-top: 40px;
 
-        &__item {
-            display: flex;
-            align-items: center;
+    //     &__item {
+    //         display: flex;
+    //         align-items: center;
 
-            // &__link {
-            //     color: $fontColor;
-            //     text-decoration: underline;
-            //     font-size: 12px;
-            // }
+    //         // &__link {
+    //         //     color: $fontColor;
+    //         //     text-decoration: underline;
+    //         //     font-size: 12px;
+    //         // }
 
-            &__btn {
-                cursor: pointer;
-                color: $bgColor;
-                background-color: $fontColor;
-                border: none;
-                border-radius: 8px;
-                padding: 6px;
-                font-size: 12px;
+    //         &__btn {
+    //             cursor: pointer;
+    //             color: $bgColor;
+    //             background-color: $fontColor;
+    //             border: none;
+    //             border-radius: 8px;
+    //             padding: 6px;
+    //             font-size: 12px;
 
-                span {
-                    color: $crazyColor;
-                }
-            }
-        }
-    }
+    //             span {
+    //                 color: $crazyColor;
+    //             }
+    //         }
+    //     }
+    // }
 
 }
 
@@ -213,10 +207,6 @@ body.lightTheme {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .container {
         max-width: 480px;
-    }
-
-    .modal__content {
-        max-width: 414px;
     }
 
     .dropdown_content > ul {
