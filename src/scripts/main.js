@@ -8,37 +8,37 @@ themeToggleButton.addEventListener('click', () => {
 
 //--------------------------------------------------------------//
 
-// Get the modal
-const modal = document.getElementById("myModal");
+// // Get the modal
+// const modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-const aboutLink = document.getElementById("about");
+// // Get the button that opens the modal
+// const aboutLink = document.getElementById("about");
 
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("modal__content_close")[0];
+// // Get the <span> element that closes the modal
+// const span = document.getElementsByClassName("modal__content_close")[0];
 
-// Variable to track if popup is active
-let isPopupActive = false;
+// // Variable to track if popup is active
+// let isPopupActive = false;
 
-// When the user clicks the button, open the modal only if popup is not active
-aboutLink.onclick = function() {
-    if (!isPopupActive) {
-        modal.style.display = "block";
-        isPopupActive = true; // Set popup as active
-    }
-};
+// // When the user clicks the button, open the modal only if popup is not active
+// aboutLink.onclick = function() {
+//     if (!isPopupActive) {
+//         modal.style.display = "block";
+//         isPopupActive = true; // Set popup as active
+//     }
+// };
 
-span.onclick = function() {
-    modal.style.display = "none";
-    isPopupActive = false; // Reset popup state
-};
+// span.onclick = function() {
+//     modal.style.display = "none";
+//     isPopupActive = false; // Reset popup state
+// };
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        isPopupActive = false; // Reset popup state
-    }
-};
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//         isPopupActive = false; // Reset popup state
+//     }
+// };
 
 //--------------------------------------------------------------//
 
