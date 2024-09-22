@@ -155,9 +155,10 @@ body.lightTheme {
         max-width: 480px;
     }
 
-    .dropdown_content > ul {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        width: 100%; /* Full width for smaller screens */
+    .dropdown_content {
+        ul {
+            width: 100%; /* Full width for smaller screens */
+        }
     }
 }
 
@@ -171,9 +172,10 @@ body.lightTheme {
         max-width: 767px;
     }
 
-    .dropdown_content > ul {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        width: 100%; /* Full width for smaller screens */
+    .dropdown_content {
+        ul {
+            width: 100%; /* Full width for smaller screens */
+        }
     }
 }
 
@@ -187,9 +189,10 @@ body.lightTheme {
         max-width: 768px;
     }
 
-    .dropdown_content > ul {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        width: 100%; /* Full width for smaller screens */
+    .dropdown_content {
+        ul {
+            width: 100%; /* Full width for smaller screens */
+        }
     }
 }
 
